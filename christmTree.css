@@ -1,0 +1,135 @@
+.tree {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+}
+
+body {
+    background-image: url(http://animations.shoppinng.ru/wp-content/uploads/2014/12/221.jpg);
+    background-size: cover;
+}
+
+.levelText {
+    right: 30px;
+    position: fixed;
+    font: italic bold 30px "Monotype Corsiva";
+    color: rgb(142, 223, 67);
+}
+
+.level {
+    background: #2b33a5;
+    font: italic bold 22px "Monotype Corsiva";
+    color: rgb(251, 255, 0);
+    width: 150px;
+}
+
+.winText {
+    font: italic bold 30px "Monotype Corsiva";
+    color: rgb(251, 255, 0);
+}
+
+dialog {
+    background: radial-gradient(rgb(142, 155, 214), #2d338b);
+    text-align: center;
+    width: 300px;
+    height: 150px;
+    padding: 0;
+}
+
+.dialogPicture {
+    max-width: 100%;
+}
+
+.cross {
+    background-color: red;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 700px;
+}
+
+.star {
+    position: absolute;
+    top: 0px;
+    width: 130px;
+    height: 130px;
+    visibility: hidden;
+    z-index: 2;
+}
+
+.chrisTree {
+    position: absolute;
+    width: 630px;
+    height: 630px;
+    bottom: 0px;
+}
+
+.twinkles {
+    top: 30px;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    height: 450px;
+}
+
+.twinkle:hover {
+    box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.699) !important;
+}
+
+.twinkle {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: radial-gradient(40% 50%, rgb(146, 146, 146), #585858)
+}
+
+.tw6,
+.tw7,
+.tw8 {
+    display: none;
+}
+
+a.botr {
+    position: fixed;
+    right: 30px;
+    top: 50px;
+    background: #fff;
+    width: 205px;
+    display: block;
+    height: 33px;
+    padding-top: 19px;
+    border: 1px solid #000;
+    font-family: 'Dosis', sans;
+    font-size: 18px;
+    font-weight: 200;
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    opacity: .8;
+    letter-spacing: 1px;
+    -webkit-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    -moz-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    -o-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    
+}
+
+a.botr:hover {
+    border: 2px solid teal;
+}

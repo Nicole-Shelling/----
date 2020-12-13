@@ -1,6 +1,8 @@
 let isFirstCard=1
 let numOfFirts; /*  координата первой из открытых плашек*/
 let map=[]; /* матрица, в которую рандомно записаны цифры, которые сопоставляются с картинками */
+let back="url('https://usercontent1.hubstatic.com/624822.png')";
+let countOfCard=0;
 
 function Pict(x){
 switch(map[x]){
@@ -16,7 +18,8 @@ switch(map[x]){
 }
 
 function changeBg(x) { /* что происходит, когда ты нажимаешь на ячейку*/
-    let blocks=document.querySelectorAll(".block");
+    if(map[x]!==0){
+    let blocks=document.querySelectorAll(".block");   
     blocks[x].style.backgroundImage=`url(${Pict(x)})`;
     function check() 
 {
@@ -30,17 +33,22 @@ function changeBg(x) { /* что происходит, когда ты нажи�
         if(a===b)
         {
          isFirstCard=1;
+         badPlayer=1;
+         map[x]=0;
+         map[numOfFirts]=0;
+         countOfCard+=2;
+        if(countOfCard===12){
+            let blo=document.querySelector('img').style.opacity=1; 
+        }
         }
         else{
-        blocks[x].style.backgroundImage="url('https://i.pinimg.com/originals/c2/fc/5c/c2fc5c3948e6058d290563e69b86619b.png')";
-        blocks[numOfFirts].style.backgroundImage="url('https://i.pinimg.com/originals/c2/fc/5c/c2fc5c3948e6058d290563e69b86619b.png')";
-        isFirstCard=1;
+        blocks[x].style.backgroundImage=back;
+        blocks[numOfFirts].style.backgroundImage=back;
+        isFirstCard=1;        
         }
     }
 }
-
-
-setTimeout(check,1000);
+setTimeout(check,1000);}
 };
 
 
